@@ -20,8 +20,9 @@ c.execute(q)
 peeps = open("courses.csv")
 p = csv.DictReader(peeps)
 for a in p:
+    #print a
     q="INSERT INTO courses VALUES ('"+a["code"]+"','"+a["id"]+"','"+a["mark"]+"')"
-c.execute(q)
+    c.execute(q)
  
 #==========================================================
 db.commit() #save changes
